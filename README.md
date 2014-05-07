@@ -54,5 +54,6 @@ INSERT INTO drivers(driver_num,driver_fname,driver_lname,driver_pass) VALUES(234
 exit
 ```
 
-
+NOTE: In ${$REPODIR}/default/var_names.php be sure to add a variable $root_pass and set it to the mysqlserver root password.  
+      This is not a good place to put it, but for testing it will suffice.
 
