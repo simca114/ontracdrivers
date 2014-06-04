@@ -38,18 +38,17 @@ Have the vhost in /etc/apache2/sites-enabled point the DocumentRoot to the locat
 
 Setting up MySQL
 ----------------
-This website logs into a MySQL server and looks for a database ``ontrac_db`` and 2 tables in it. Create these as follows:
+This website logs into a MySQL server and looks for a database ``ontrac_db`` and 2 tables in it. Use the tables in "mysql_tables":
 ```
-#run these as root
+#run these as root (be sure to include the "-h <mysqlserver host>" if not on the same machine)
 $ mysql -p   #connect to the mysql server
 
-CREATE DATABASE ontrac_db;
-USE ontrac_db;
+mysql> CREATE DATABASE ontrac_db;
+mysql> USE ontrac_db;
 
-CREATE TABLE drivers ( driver_num SMALLINT, driver_fname VARCHAR(40), driver_lname VARCHAR(40), driver_pass(60) );
-CREATE TABLE stops ( driver_num SMALLINT, date DATE, nums_stops SMALLINT DEFAULT 0, sun_stops SMALLINT DEFAULT 0, hw_stops SMALLINT DEFAULT 0, pu_stops SMALLINT DEFAULT 0);
-
-INSERT INTO drivers(driver_num,driver_fname,driver_lname,driver_pass) VALUES(234,'John','Doe','password'); #random user to log into the website with
+#create the tables from the table source files
+mysql> SOURCE <path_to_file>/drivers.sql
+mysql> SOURCE <path_to_file>/stops.sql
 
 exit
 ```
