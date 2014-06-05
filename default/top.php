@@ -7,7 +7,7 @@ statements of a page on the website -->
   <title>OnTrac Driver</title>
   <link rel="stylesheet" type="text/css" href="../default/style.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../bootstrap/css/def_style.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-theme.css">
   </head>
   <body>
 
