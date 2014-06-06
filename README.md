@@ -3,6 +3,13 @@ Unofficial Ontrac Driver Website
 
 This is a website i wrote from scratch in order to learn and practice HTML, CSS and PHP.  
 
+NOTE: The MySQL tables have 3 users stored by defualt
+```
+Username:153   Password:153
+Username:170   Password:170
+Username:907   Password:907
+```
+
 Current Features
 ----------------
 
